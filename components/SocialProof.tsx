@@ -42,6 +42,8 @@ export default function SocialProof({ onContactClick }: SocialProofProps) {
                     loop
                     muted
                     playsInline
+                    webkit-playsinline="true"
+                    preload="auto"
                     className="w-32 md:w-44 h-56 md:h-80 object-cover"
                   />
                 </motion.div>
@@ -74,6 +76,8 @@ export default function SocialProof({ onContactClick }: SocialProofProps) {
                     loop
                     muted
                     playsInline
+                    webkit-playsinline="true"
+                    preload="auto"
                     className="w-40 md:w-52 h-72 md:h-96 object-cover"
                   />
                 </motion.div>
@@ -107,6 +111,8 @@ export default function SocialProof({ onContactClick }: SocialProofProps) {
                     loop
                     muted
                     playsInline
+                    webkit-playsinline="true"
+                    preload="auto"
                     className="w-32 md:w-44 h-56 md:h-80 object-cover"
                   />
                 </motion.div>

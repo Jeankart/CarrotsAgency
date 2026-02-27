@@ -133,6 +133,8 @@ export default function AIAssetsLanding() {
                   autoPlay
                   muted
                   playsInline
+                  webkit-playsinline="true"
+                  preload="auto"
                   onEnded={handleVideoEnd}
                   className="w-full aspect-[9/16] max-h-[500px] object-cover"
                 />
