@@ -12,9 +12,6 @@ export const metadata: Metadata = {
   title: "Carrots Agency | Digital Marketing Growth",
   description: "Drive qualified leads with AI-powered campaigns across Google Ads, Meta, TikTok & more.",
   keywords: "marketing agency, digital marketing, lead generation, Google Ads, Meta Ads, TikTok Ads, AI",
-  icons: {
-    icon: '/FAvicon.png',
-  },
 };
 
 export default function RootLayout({

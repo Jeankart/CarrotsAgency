@@ -69,7 +69,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', damping: 20 }}
-            className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-md mx-4 bg-white rounded-3xl shadow-2xl z-50 overflow-hidden"
+            className="fixed inset-4 sm:inset-auto sm:top-1/2 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:-translate-y-1/2 w-auto sm:w-full sm:max-w-md bg-white rounded-2xl md:rounded-3xl shadow-2xl z-50 overflow-hidden max-h-[90vh] overflow-y-auto"
           >
             {/* Close Button */}
             <button
@@ -101,7 +101,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               </motion.div>
             ) : (
               // Form
-              <form onSubmit={handleSubmit(onSubmit)} className="p-8 space-y-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="p-6 md:p-8 space-y-4 md:space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-2">
                     Let's Talk! 🥕
@@ -191,6 +191,17 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   You'll receive a response within 24 hours. Email:{' '}
                   <span className="font-semibold">carrotagency.info@gmail.com</span>
                 </p>
+
+                {/* Call Button */}
+                <a
+                  href="tel:+34123456789"
+                  className="flex items-center justify-center gap-2 w-full py-3 rounded-lg font-semibold text-orange-600 bg-orange-50 hover:bg-orange-100 transition-all border border-orange-200"
+                >
+                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span>Call us</span>
+                </a>
               </form>
             )}
           </motion.div>
