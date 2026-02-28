@@ -14,7 +14,7 @@ interface FormData {
   services: string[];
 }
 
-const videos = ['/videos/UGC1.mp4', '/videos/UGC2.mp4', '/videos/UGC3.mp4'];
+const videos = ['/videos/UGC1.webm', '/videos/UGC2.webm', '/videos/UGC3.webm'];
 
 export default function AIAssetsLanding() {
   const {

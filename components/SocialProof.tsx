@@ -1,12 +1,31 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 interface SocialProofProps {
   onContactClick: () => void;
 }
 
 export default function SocialProof({ onContactClick }: SocialProofProps) {
+  const video1Ref = useRef<HTMLVideoElement>(null);
+  const video2Ref = useRef<HTMLVideoElement>(null);
+  const video3Ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const playVideo = (ref: React.RefObject<HTMLVideoElement>) => {
+      if (ref.current) {
+        ref.current.play().catch(error => {
+          console.log('Video autoplay prevented:', error);
+        });
+      }
+    };
+
+    playVideo(video1Ref);
+    playVideo(video2Ref);
+    playVideo(video3Ref);
+  }, []);
+
   return (
     <section className="py-24 px-6 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -37,7 +56,8 @@ export default function SocialProof({ onContactClick }: SocialProofProps) {
                   }}
                 >
                   <video
-                    src="/videos/UGC1.mp4"
+                    ref={video1Ref}
+                    src="/videos/UGC1.webm"
                     autoPlay
                     loop
                     muted
@@ -71,7 +91,8 @@ export default function SocialProof({ onContactClick }: SocialProofProps) {
                   }}
                 >
                   <video
-                    src="/videos/UGC2.mp4"
+                    ref={video2Ref}
+                    src="/videos/UGC2.webm"
                     autoPlay
                     loop
                     muted
@@ -106,7 +127,8 @@ export default function SocialProof({ onContactClick }: SocialProofProps) {
                   }}
                 >
                   <video
-                    src="/videos/UGC3.mp4"
+                    ref={video3Ref}
+                    src="/videos/UGC3.webm"
                     autoPlay
                     loop
                     muted
